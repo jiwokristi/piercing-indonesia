@@ -43,13 +43,13 @@ export const Navbar = () => {
         </li>
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
-            to="payment-confirmation"
+            to="find-our-store"
             className="group-hover:translate-y-[2rem] transition-all ease-in duration-200"
           >
             Find Our Store
           </Link>
           <Link
-            to="payment-confirmation"
+            to="find-our-store"
             className="group-hover:translate-y-[3.6rem] transition-all ease-in duration-200"
           >
             Find Our Store

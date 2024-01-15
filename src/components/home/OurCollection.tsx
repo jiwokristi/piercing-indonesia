@@ -146,7 +146,7 @@ export const OurCollection = () => {
       <div className="py-32">
         <Link
           className="flex items-center justify-center w-fit mx-auto gap-8 text-44 font-general-sans-bold border-b-4 border-gray-1 transition-all ease-in hover:border-transparent"
-          to="/products"
+          to="/products?filter=all"
         >
           <span>More</span>
           <PlusIcon classes="h-32 w-32" />
