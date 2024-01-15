@@ -65,6 +65,9 @@ export default {
           2: '#4e4e4e',
         },
       },
+      backgroundImage: {
+        'hero-image': "url('./src/assets/images/hayes-potter.jpg')",
+      },
     },
   },
   plugins: [],
