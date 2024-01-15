@@ -9,7 +9,7 @@ import septumPiercingImage from '../../assets/images/edward-howell.jpg'
 
 export const OurCollection = () => {
   return (
-    <>
+    <section id="OurCollection" className="py-96">
       {/* ----- Description ----- */}
       <p className="font-general-sans-medium text-30 leading-medium w-1/2 mb-32">
         Discover the perfect piece of jewelry that aligns with your unique style
@@ -27,14 +27,14 @@ export const OurCollection = () => {
         <Link to="/products?filter=lobe" className="flex flex-col gap-32">
           <div className="w-fit h-fit overflow-hidden">
             <img
-              className="hover:scale-110 transition-all ease-in"
+              className="transition-all ease-in hover:scale-110"
               src={lobePiercingImage}
               alt="A woman with a lobe piercing."
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-32">Lobe</h3>
-            <span>&mdash;</span>
+            <h3 className="text-30">Lobe</h3>
+            <span className="text-30">&mdash;</span>
             <p className="text-16 text-gray-2">
               Photo by{' '}
               <Link
@@ -56,14 +56,14 @@ export const OurCollection = () => {
         <Link to="/products?filter=tongue" className="flex flex-col gap-32">
           <div className="w-fit h-fit overflow-hidden">
             <img
-              className="hover:scale-110 transition-all ease-in"
+              className="transition-all ease-in hover:scale-110"
               src={tonguePiercingImage}
               alt="A woman with a tongue piercing."
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-32">Tongue</h3>
-            <span>&mdash;</span>
+            <h3 className="text-30">Tongue</h3>
+            <span className="text-30">&mdash;</span>
             <p className="text-16 text-gray-2">
               Photo by{' '}
               <Link
@@ -85,14 +85,14 @@ export const OurCollection = () => {
         <Link to="/products?filter=labret" className="flex flex-col gap-32">
           <div className="w-fit h-fit overflow-hidden">
             <img
-              className="hover:scale-110 transition-all ease-in"
+              className="brightness-75 transition-all ease-in hover:scale-110"
               src={labretPiercingImage}
               alt="A woman with a lip piercing."
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-32">Labret</h3>
-            <span>&mdash;</span>
+            <h3 className="text-30">Labret</h3>
+            <span className="text-30">&mdash;</span>
             <p className="text-16 text-gray-2">
               Photo by{' '}
               <Link
@@ -114,14 +114,14 @@ export const OurCollection = () => {
         <Link to="/products?filter=septum" className="flex flex-col gap-32">
           <div className="w-fit h-fit overflow-hidden">
             <img
-              className="hover:scale-110 transition-all ease-in"
+              className="transition-all ease-in hover:scale-110"
               src={septumPiercingImage}
               alt="A man with a septum piercing."
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-32">Septum</h3>
-            <span>&mdash;</span>
+            <h3 className="text-30">Septum</h3>
+            <span className="text-30">&mdash;</span>
             <p className="text-16 text-gray-2">
               Photo by{' '}
               <Link
@@ -152,6 +152,6 @@ export const OurCollection = () => {
           <PlusIcon classes="h-32 w-32" />
         </Link>
       </div>
-    </>
+    </section>
   )
 }

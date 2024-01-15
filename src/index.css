@@ -39,6 +39,6 @@
   }
 }
 
-#RootLayout section {
+#RootLayout section:not(#Hero) {
   @apply mx-auto max-w-[140rem] px-32;
 }
