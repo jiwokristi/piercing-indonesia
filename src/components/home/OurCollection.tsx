@@ -11,19 +11,19 @@ export const OurCollection = () => {
   return (
     <section id="OurCollection" className="py-96">
       {/* ----- Description ----- */}
-      <p className="font-general-sans-medium text-30 leading-medium w-1/2 mb-32">
+      <p className="heading--tertiary w-1/2 mb-32">
         Discover the perfect piece of jewelry that aligns with your unique style
         and preferences.
       </p>
 
       {/* ----- Heading ----- */}
-      <div className="border-t border-gray-1 flex flex-col text-[11rem] font-general-sans-bold py-32">
-        <h2>OUR</h2>
-        <h2 className="self-end">COLLECTION</h2>
-      </div>
+      <header className="border-t border-gray-1 flex flex-col heading--primary py-32">
+        <h1>OUR</h1>
+        <h1 className="self-end">COLLECTION</h1>
+      </header>
 
       {/* ----- Image Grid ----- */}
-      <div className="grid grid-cols-2 gap-x-32 gap-y-64 py-32 font-general-sans-medium">
+      <div className="grid grid-cols-2 gap-x-32 gap-y-64 py-32">
         <Link to="/products?filter=lobe" className="flex flex-col gap-32">
           <div className="w-fit h-fit overflow-hidden">
             <img
@@ -33,9 +33,9 @@ export const OurCollection = () => {
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-30">Lobe</h3>
-            <span className="text-30">&mdash;</span>
-            <p className="text-16 text-gray-2">
+            <p className="heading--tertiary">Lobe</p>
+            <span className="heading--tertiary">&mdash;</span>
+            <p className="font-general-sans-medium text-16 text-gray-2">
               Photo by{' '}
               <Link
                 className="border-b-2 transition-all ease-in border-b-transparent hover:border-b-gray-2"
@@ -62,9 +62,9 @@ export const OurCollection = () => {
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-30">Tongue</h3>
-            <span className="text-30">&mdash;</span>
-            <p className="text-16 text-gray-2">
+            <p className="heading--tertiary">Tongue</p>
+            <span className="heading--tertiary">&mdash;</span>
+            <p className="font-general-sans-medium text-16 text-gray-2">
               Photo by{' '}
               <Link
                 className="border-b-2 transition-all ease-in border-b-transparent hover:border-b-gray-2"
@@ -91,9 +91,9 @@ export const OurCollection = () => {
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-30">Labret</h3>
-            <span className="text-30">&mdash;</span>
-            <p className="text-16 text-gray-2">
+            <p className="heading--tertiary">Labret</p>
+            <span className="heading--tertiary">&mdash;</span>
+            <p className="font-general-sans-medium text-16 text-gray-2">
               Photo by{' '}
               <Link
                 className="border-b-2 transition-all ease-in border-b-transparent hover:border-b-gray-2"
@@ -120,9 +120,9 @@ export const OurCollection = () => {
             />
           </div>
           <div className="flex items-center gap-16">
-            <h3 className="text-30">Septum</h3>
-            <span className="text-30">&mdash;</span>
-            <p className="text-16 text-gray-2">
+            <p className="heading--tertiary">Septum</p>
+            <span className="heading--tertiary">&mdash;</span>
+            <p className="font-general-sans-medium text-16 text-gray-2">
               Photo by{' '}
               <Link
                 className="border-b-2 transition-all ease-in border-b-transparent hover:border-b-gray-2"
@@ -146,7 +146,7 @@ export const OurCollection = () => {
       <div className="py-32">
         <Link
           className="flex items-center justify-center w-fit mx-auto gap-8 text-44 font-general-sans-bold border-b-4 border-gray-1 transition-all ease-in hover:border-transparent"
-          to="/products"
+          to="/products?filter=all"
         >
           <span>More</span>
           <PlusIcon classes="h-32 w-32" />
