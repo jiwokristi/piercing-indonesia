@@ -1,5 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
+
+import { Carousel } from '../ui/Carousel'
+import { CarouselCard } from '../ui/card/CarouselCard'
 
 import jewelry1 from '../../assets/images/jewelry/anastasia-anastasia.jpg'
 import jewelry2 from '../../assets/images/jewelry/birgith-roosipuu-k.jpg'
@@ -22,23 +24,78 @@ export const TopSelling = () => {
       </div>
 
       {/* ----- Carousel ----- */}
-      <div className="flex gap-32">
-        <div className="w-fit h-fit overflow-hidden">
-          <img src={jewelry1} alt="" />
-        </div>
-        <div className="w-fit h-fit overflow-hidden">
-          <img src={jewelry2} alt="" />
-        </div>
-        <div className="w-fit h-fit overflow-hidden">
-          <img src={jewelry3} alt="" />
-        </div>
-        <div className="w-fit h-fit overflow-hidden">
-          <img src={jewelry4} alt="" />
-        </div>
-        <div className="w-fit h-fit overflow-hidden">
-          <img src={jewelry5} alt="" />
-        </div>
-      </div>
+      <Carousel>
+        <CarouselCard
+          src={jewelry1}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry2}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry3}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry4}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry5}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry1}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry2}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry3}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry4}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+        <CarouselCard
+          src={jewelry5}
+          alt=""
+          name="Product Name"
+          category="Product Category"
+          price="Rp. 15.000"
+        />
+      </Carousel>
     </section>
   )
 }

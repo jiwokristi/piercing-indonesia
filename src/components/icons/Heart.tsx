@@ -1,5 +1,5 @@
 import { Heart } from 'lucide-react'
 
-export const HeartIcon = () => {
-  return <Heart className="text-gray-1" />
+export const HeartIcon = ({ classes }: { classes?: string }) => {
+  return <Heart className={`text-gray-1 ${classes}`} />
 }
