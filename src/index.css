@@ -19,7 +19,11 @@
   }
 
   body {
-    @apply font-normal leading font-general-sans text-gray-1 bg-almost-white-1;
+    @apply font-normal leading font-general-sans antialiased text-gray-1 bg-almost-white-1;
+  }
+
+  body:has(#About) {
+    @apply bg-gray-3 text-almost-white-1;
   }
 }
 

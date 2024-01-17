@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
-import { Carousel } from '../ui/Carousel'
-import { CarouselCard } from '../ui/card/CarouselCard'
+import { Carousel } from '../ui'
+import { ProductCard } from '../ui/card/ProductCard'
 
 import jewelry1 from '../../assets/images/jewelry/anastasia-anastasia.jpg'
 import jewelry2 from '../../assets/images/jewelry/birgith-roosipuu-k.jpg'
@@ -25,7 +25,7 @@ export const TopSelling = () => {
 
       {/* ----- Carousel ----- */}
       <Carousel>
-        <CarouselCard
+        <ProductCard
           src={jewelry1}
           alt=""
           name="Product Name"
@@ -35,63 +35,63 @@ export const TopSelling = () => {
           startDate="2024-1-1"
           endDate="2024-1-10"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry2}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry3}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry4}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry5}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry1}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry2}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry3}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry4}
           alt=""
           name="Product Name"
           category="Product Category"
           price="Rp15.000"
         />
-        <CarouselCard
+        <ProductCard
           src={jewelry5}
           alt=""
           name="Product Name"

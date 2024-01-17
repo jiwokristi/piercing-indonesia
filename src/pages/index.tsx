@@ -5,7 +5,7 @@ import { Language, Navbar, Footer } from '../components/layout'
 export const RootLayout = () => {
   return (
     <>
-      <main id="RootLayout" className="antialiased">
+      <main id="RootLayout">
         <Language />
         <Navbar />
         <Outlet />
