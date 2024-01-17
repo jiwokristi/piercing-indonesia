@@ -1,14 +1,16 @@
 import { Outlet } from 'react-router-dom'
 
-import { Navbar } from '../components/layout/Navbar'
-import { Language } from '../components/layout/Language'
+import { Language, Navbar, Footer } from '../components/layout'
 
 export const RootLayout = () => {
   return (
-    <main id="RootLayout" className="antialiased">
-      <Language />
-      <Navbar />
-      <Outlet />
-    </main>
+    <>
+      <main id="RootLayout" className="antialiased">
+        <Language />
+        <Navbar />
+        <Outlet />
+      </main>
+      <Footer />
+    </>
   )
 }

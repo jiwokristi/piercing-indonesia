@@ -63,11 +63,12 @@ export default {
         gray: {
           1: '#222',
           2: '#4e4e4e',
+          3: '#141414',
         },
         danger: '#f03e3e',
       },
       backgroundImage: {
-        'hero-image': "url('./src/assets/images/hayes-potter.jpg')",
+        'hero-image': "url('./src/assets/images/people/hayes-potter.jpg')",
       },
     },
   },
