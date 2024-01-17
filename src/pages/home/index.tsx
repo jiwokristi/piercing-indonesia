@@ -1,9 +1,17 @@
-import { OurCollection } from '../../components/home/OurCollection'
+import {
+  Hero,
+  OurCollection,
+  NewArrivals,
+  TopSelling,
+} from '../../components/home'
 
 export const Home = () => {
   return (
-    <section id="Home" className="text-30 py-96">
+    <>
+      <Hero />
       <OurCollection />
-    </section>
+      <NewArrivals />
+      <TopSelling />
+    </>
   )
 }

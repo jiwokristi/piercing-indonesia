@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav
       id="Navbar"
-      className="sticky top-0 z-10 text-20 flex items-center p-32 justify-between tracking-1.25 bg-almost-white-1"
+      className="sticky top-0 z-20 text-20 flex items-center p-32 justify-between tracking-1.25 bg-almost-white-1"
     >
       <Link to="/">Logo</Link>
       <ul className="flex items-center gap-32">
@@ -24,19 +24,8 @@ export const Navbar = () => {
             Home
           </Link>
         </li>
-        <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
-          <Link
-            to="/products?filter=all"
-            className="group-hover:translate-y-[2rem] transition-all ease-in duration-200"
-          >
-            Products
-          </Link>
-          <Link
-            to="/products?filter=all"
-            className="group-hover:translate-y-[3.6rem] transition-all ease-in duration-200"
-          >
-            Products
-          </Link>
+        <li>
+          <Link to="/products?filter=all">Products</Link>
         </li>
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
@@ -54,13 +43,13 @@ export const Navbar = () => {
         </li>
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
-            to="payment-confirmation"
+            to="find-our-store"
             className="group-hover:translate-y-[2rem] transition-all ease-in duration-200"
           >
             Find Our Store
           </Link>
           <Link
-            to="payment-confirmation"
+            to="find-our-store"
             className="group-hover:translate-y-[3.6rem] transition-all ease-in duration-200"
           >
             Find Our Store
