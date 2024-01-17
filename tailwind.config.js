@@ -64,6 +64,7 @@ export default {
           1: '#222',
           2: '#4e4e4e',
         },
+        danger: '#f03e3e',
       },
       backgroundImage: {
         'hero-image': "url('./src/assets/images/hayes-potter.jpg')",
