@@ -5,7 +5,7 @@ import { mediumFormat } from '../../../utils/constants/date'
 
 import { HeartIcon } from '../../icons'
 
-export interface CarouselCardProps {
+export interface ProductCardProps {
   src: string
   alt: string
   name: string
@@ -16,7 +16,7 @@ export interface CarouselCardProps {
   endDate?: string
 }
 
-export const CarouselCard = ({
+export const ProductCard = ({
   src,
   alt,
   name,
@@ -25,7 +25,7 @@ export const CarouselCard = ({
   previousPrice,
   startDate,
   endDate,
-}: CarouselCardProps) => {
+}: ProductCardProps) => {
   return (
     <div className="relative grid grid-rows-[min-content] gap-16 font-general-sans-medium text-18 snap-start">
       <div className="w-fit h-fit overflow-hidden">
