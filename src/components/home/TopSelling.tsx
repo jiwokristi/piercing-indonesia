@@ -30,70 +30,73 @@ export const TopSelling = () => {
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
+          previousPrice="Rp25.000"
+          startDate="2024-1-1"
+          endDate="2024-1-10"
         />
         <CarouselCard
           src={jewelry2}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry3}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry4}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry5}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry1}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry2}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry3}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry4}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
         <CarouselCard
           src={jewelry5}
           alt=""
           name="Product Name"
           category="Product Category"
-          price="Rp. 15.000"
+          price="Rp15.000"
         />
       </Carousel>
     </section>
