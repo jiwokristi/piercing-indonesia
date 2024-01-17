@@ -1,7 +1,9 @@
-import { Hero } from '../../components/home/Hero'
-import { OurCollection } from '../../components/home/OurCollection'
-import { NewArrivals } from '../../components/home/NewArrivals'
-import { TopSelling } from '../../components/home/TopSelling'
+import {
+  Hero,
+  OurCollection,
+  NewArrivals,
+  TopSelling,
+} from '../../components/home'
 
 export const Home = () => {
   return (
