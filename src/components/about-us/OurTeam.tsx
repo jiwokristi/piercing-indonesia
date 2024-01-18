@@ -66,7 +66,7 @@ export const OurTeam = () => {
             <LinkButton
               variant="solid-white"
               href="#"
-              label="SCHEDULE AN APPOINTMENT"
+              label="BOOK AN APPOINTMENT"
             />
             <LinkButton
               variant="outlined-white"
