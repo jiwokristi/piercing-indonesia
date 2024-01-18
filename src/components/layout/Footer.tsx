@@ -9,7 +9,7 @@ export const Footer = () => {
   return (
     <footer
       id="Footer"
-      className={clsx('py-96 px-48 grid grid-cols-[1fr_1fr_1fr_2fr] gap-y-48', {
+      className={clsx('py-96 px-48 grid grid-cols-[1fr_1fr_3fr] gap-y-48', {
         'bg-almost-white-1': isDarkLayout,
         'bg-gray-3': !isDarkLayout,
       })}
@@ -42,6 +42,18 @@ export const Footer = () => {
           </li>
           <li>
             <Link
+              to="/find-our-store"
+              target="_top"
+              className={clsx('font-general-sans-medium text-16', {
+                'text-gray-3': isDarkLayout,
+                'text-almost-white-1': !isDarkLayout,
+              })}
+            >
+              FIND OUR STORE
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/about-us"
               target="_top"
               className={clsx('font-general-sans-medium text-16', {
@@ -54,14 +66,14 @@ export const Footer = () => {
           </li>
           <li>
             <Link
-              to="/find-our-store"
+              to="/feedback"
               target="_top"
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
               })}
             >
-              FIND OUR STORE
+              SEND US FEEDBACK
             </Link>
           </li>
         </ul>
@@ -69,112 +81,29 @@ export const Footer = () => {
       <nav>
         <ul className="flex flex-col gap-16">
           <li>
-            <Link
-              to="/get-help"
-              target="_top"
+            <p
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
               })}
             >
               GET HELP
-            </Link>
+            </p>
           </li>
           <li>
             <Link
-              to="/cart/order-status"
+              to="/faq"
               className={clsx('text-14 transition-all ease-in', {
                 'text-gray-1 hover:text-gray-3': isDarkLayout,
                 'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
               })}
             >
-              Order Status
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/get-help/delivery"
-              className={clsx('text-14 transition-all ease-in', {
-                'text-gray-1 hover:text-gray-3': isDarkLayout,
-                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
-              })}
-            >
-              Delivery
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/get-help/returns"
-              className={clsx('text-14 transition-all ease-in', {
-                'text-gray-1 hover:text-gray-3': isDarkLayout,
-                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
-              })}
-            >
-              Returns
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/get-help/payment-options"
-              className={clsx('text-14 transition-all ease-in', {
-                'text-gray-1 hover:text-gray-3': isDarkLayout,
-                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
-              })}
-            >
-              Payment Options
+              Frequently Asked
             </Link>
           </li>
         </ul>
       </nav>
-      <nav>
-        <ul className="flex flex-col gap-16">
-          <li>
-            <Link
-              to="/about-us"
-              target="_top"
-              className={clsx('font-general-sans-medium text-16', {
-                'text-gray-3': isDarkLayout,
-                'text-almost-white-1': !isDarkLayout,
-              })}
-            >
-              ABOUT PIERCING INDONESIA
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about-us/our-team"
-              className={clsx('text-14 transition-all ease-in', {
-                'text-gray-1 hover:text-gray-3': isDarkLayout,
-                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
-              })}
-            >
-              Our Team
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about-us/news"
-              className={clsx('text-14 transition-all ease-in', {
-                'text-gray-1 hover:text-gray-3': isDarkLayout,
-                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
-              })}
-            >
-              News
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about-us/careers"
-              className={clsx('text-14 transition-all ease-in', {
-                'text-gray-1 hover:text-gray-3': isDarkLayout,
-                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
-              })}
-            >
-              Careers
-            </Link>
-          </li>
-        </ul>
-      </nav>
+
       <nav>
         <ul
           className={clsx('flex flex-col items-end gap-32 heading--tertiary', {
