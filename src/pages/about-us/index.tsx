@@ -1,9 +1,10 @@
-import { About } from '../../components/about-us'
+import { About, OurTeam } from '../../components/about-us'
 
 export const AboutUs = () => {
   return (
     <>
       <About />
+      <OurTeam />
     </>
   )
 }

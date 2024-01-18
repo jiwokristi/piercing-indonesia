@@ -59,13 +59,16 @@ export default {
         'general-sans-bold': ['GeneralSans-Bold', 'sans-serif'],
       },
       colors: {
-        'almost-white': { 1: '#FBF8F2', 2: '#e2dfda' },
+        'almost-white': { 1: '#FBF8F2', 2: '#e2dfda', 3: '#c9c6c2' },
         gray: {
           1: '#222',
           2: '#4e4e4e',
           3: '#141414',
         },
         danger: '#f03e3e',
+      },
+      boxShadow: {
+        'focus-white': '0 0 0 3px rgba(251, 248, 242, 0.5)',
       },
       backgroundImage: {
         'hero-image': "url('./src/assets/images/people/hayes-potter.jpg')",
