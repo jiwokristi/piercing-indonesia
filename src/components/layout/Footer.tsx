@@ -1,17 +1,29 @@
 import { Link } from 'react-router-dom'
+import clsx from 'clsx'
+
+import { useUrl } from '../../utils/hooks/useUrl'
 
 export const Footer = () => {
+  const { isDarkLayout } = useUrl()
+
   return (
     <footer
       id="Footer"
-      className="py-96 px-48 bg-gray-3 grid grid-cols-[1fr_1fr_1fr_2fr] gap-y-48"
+      className={clsx('py-96 px-48 grid grid-cols-[1fr_1fr_3fr] gap-y-48', {
+        'bg-almost-white-1': isDarkLayout,
+        'bg-gray-3': !isDarkLayout,
+      })}
     >
       <nav>
         <ul className="flex flex-col gap-16">
           <li>
             <Link
               to="/"
-              className="font-general-sans-medium text-16 text-almost-white-1"
+              target="_top"
+              className={clsx('font-general-sans-medium text-16', {
+                'text-gray-3': isDarkLayout,
+                'text-almost-white-1': !isDarkLayout,
+              })}
             >
               HOME
             </Link>
@@ -19,25 +31,49 @@ export const Footer = () => {
           <li>
             <Link
               to="/products?filter=all"
-              className="font-general-sans-medium text-16 text-almost-white-1"
+              target="_top"
+              className={clsx('font-general-sans-medium text-16', {
+                'text-gray-3': isDarkLayout,
+                'text-almost-white-1': !isDarkLayout,
+              })}
             >
               PRODUCTS
             </Link>
           </li>
           <li>
             <Link
+              to="/find-our-store"
+              target="_top"
+              className={clsx('font-general-sans-medium text-16', {
+                'text-gray-3': isDarkLayout,
+                'text-almost-white-1': !isDarkLayout,
+              })}
+            >
+              FIND OUR STORE
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/about-us"
-              className="font-general-sans-medium text-16 text-almost-white-1"
+              target="_top"
+              className={clsx('font-general-sans-medium text-16', {
+                'text-gray-3': isDarkLayout,
+                'text-almost-white-1': !isDarkLayout,
+              })}
             >
               ABOUT US
             </Link>
           </li>
           <li>
             <Link
-              to="/find-our-store"
-              className="font-general-sans-medium text-16 text-almost-white-1"
+              to="/feedback"
+              target="_top"
+              className={clsx('font-general-sans-medium text-16', {
+                'text-gray-3': isDarkLayout,
+                'text-almost-white-1': !isDarkLayout,
+              })}
             >
-              FIND OUR STORE
+              SEND US FEEDBACK
             </Link>
           </li>
         </ul>
@@ -45,77 +81,36 @@ export const Footer = () => {
       <nav>
         <ul className="flex flex-col gap-16">
           <li>
-            <Link
-              to="/get-help"
-              className="font-general-sans-medium text-16 text-almost-white-1"
+            <p
+              className={clsx('font-general-sans-medium text-16', {
+                'text-gray-3': isDarkLayout,
+                'text-almost-white-1': !isDarkLayout,
+              })}
             >
               GET HELP
-            </Link>
+            </p>
           </li>
           <li>
             <Link
-              to="/cart/order-status"
-              className="text-14 text-almost-white-2 transition-all ease-in hover:text-almost-white-1"
+              to="/faq"
+              className={clsx('text-14 transition-all ease-in', {
+                'text-gray-1 hover:text-gray-3': isDarkLayout,
+                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
+              })}
             >
-              Order Status
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/get-help/delivery"
-              className="text-14 text-almost-white-2 transition-all ease-in hover:text-almost-white-1"
-            >
-              Delivery
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/get-help/returns"
-              className="text-14 text-almost-white-2 transition-all ease-in hover:text-almost-white-1"
-            >
-              Returns
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/get-help/payment-options"
-              className="text-14 text-almost-white-2 transition-all ease-in hover:text-almost-white-1"
-            >
-              Payment Options
+              Frequently Asked
             </Link>
           </li>
         </ul>
       </nav>
+
       <nav>
-        <ul className="flex flex-col gap-16">
-          <li>
-            <Link
-              to="/about-us"
-              className="font-general-sans-medium text-16 text-almost-white-1"
-            >
-              ABOUT PIERCING INDONESIA
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/news"
-              className="text-14 text-almost-white-2 transition-all ease-in hover:text-almost-white-1"
-            >
-              News
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/careers"
-              className="text-14 text-almost-white-2 transition-all ease-in hover:text-almost-white-1"
-            >
-              Careers
-            </Link>
-          </li>
-        </ul>
-      </nav>
-      <nav>
-        <ul className="flex flex-col items-end gap-32 heading--tertiary text-almost-white-1">
+        <ul
+          className={clsx('flex flex-col items-end gap-32 heading--tertiary', {
+            'text-gray-3': isDarkLayout,
+            'text-almost-white-1': !isDarkLayout,
+          })}
+        >
           <li className="flex items-center justify-end gap-32">
             <Link
               to="https://www.instagram.com/piercingindonesia/"
@@ -133,7 +128,13 @@ export const Footer = () => {
           <li className="flex flex-col items-end gap-16">
             <Link
               to="mailto:piercingindonesia@gmail.com"
-              className="font-general-sans-medium text-36 leading-medium border-b-4 border-almost-white-1 transition-all ease-in hover:border-transparent"
+              className={clsx(
+                'font-general-sans-medium text-36 leading-medium border-b-4 transition-all ease-in hover:border-transparent',
+                {
+                  'border-gray-3': isDarkLayout,
+                  'border-almost-white-1': !isDarkLayout,
+                },
+              )}
             >
               piercingindonesia@gmail.com
             </Link>
@@ -146,8 +147,18 @@ export const Footer = () => {
           </li>
         </ul>
       </nav>
-      <div className="pt-48 border-t-2 border-almost-white-1 col-span-4">
-        <p className="text-16 font-general-sans-medium text-almost-white-1">
+      <div
+        className={clsx('pt-48 border-t-2 col-span-4', {
+          'border-gray-3': isDarkLayout,
+          'border-almost-white-1': !isDarkLayout,
+        })}
+      >
+        <p
+          className={clsx('text-16 font-general-sans-medium ', {
+            'text-gray-3': isDarkLayout,
+            'text-almost-white-1': !isDarkLayout,
+          })}
+        >
           &copy;{new Date().getFullYear()} PIERCING INDONESIA
         </p>
       </div>

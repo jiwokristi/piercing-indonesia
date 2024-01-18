@@ -8,9 +8,7 @@
   }
 
   *:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(16, 148, 221, 0.5);
-    transition: all 0.15s;
+    @apply outline-none shadow-focus-white transition-all;
   }
 
   html {
@@ -19,7 +17,11 @@
   }
 
   body {
-    @apply font-normal leading font-general-sans text-gray-1 bg-almost-white-1;
+    @apply font-normal leading font-general-sans antialiased text-gray-1 bg-almost-white-1;
+  }
+
+  body:has(#About) {
+    @apply bg-gray-3 text-almost-white-1;
   }
 }
 
@@ -36,6 +38,18 @@
     @apply rounded-[6px] bg-gray-2/30;
   }
 
+  .scrollbar-dark::-webkit-scrollbar {
+    @apply w-8 h-8;
+  }
+
+  .scrollbar-dark::-webkit-scrollbar-track {
+    @apply bg-gray-2/30;
+  }
+
+  .scrollbar-dark::-webkit-scrollbar-thumb {
+    @apply rounded-[6px] bg-almost-white-2/30;
+  }
+
   .heading--primary {
     @apply font-general-sans-bold text-[11rem];
   }
@@ -49,6 +63,46 @@
   }
 }
 
+/* *----- LAYOUT ----- */
 #RootLayout section:not(#Hero):not(#NewArrivals):not(#TopSelling) {
   @apply mx-auto max-w-[140rem] px-32;
+}
+
+/* *----- OUR TEAM ----- */
+.mask-element {
+  /* ? The transparent is the ones that will be faded out. */
+  /* ? The white is just something that has no opacity on it, you can change it to red and it will work the same. */
+
+  /* ? The white begins at 70%, and then up until 80% it won't be faded out. */
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent,
+    white 70%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(
+    to right,
+    transparent,
+    white 70%,
+    white 80%,
+    transparent
+  );
+}
+
+.mask-element--inner {
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 92%,
+    transparent
+  );
+  mask: linear-gradient(
+    to right,
+    transparent,
+    white 10%,
+    white 92%,
+    transparent
+  );
 }

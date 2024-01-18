@@ -19,7 +19,7 @@ export const OurCollection = () => {
       {/* ----- Heading ----- */}
       <header className="border-t border-gray-1 flex flex-col heading--primary py-32">
         <h1>OUR</h1>
-        <h1 className="self-end">COLLECTION</h1>
+        <h1 className="self-end italic">COLLECTION</h1>
       </header>
 
       {/* ----- Image Grid ----- */}
