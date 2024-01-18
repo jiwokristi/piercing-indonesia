@@ -56,62 +56,62 @@ export const Navbar = () => {
         </li>
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
-            to="/about-us"
+            to="/find-our-store"
             target="_top"
             className={clsx(
               'group-hover:translate-y-[2rem] transition-all ease-in duration-200',
               {
-                'font-general-sans-medium': mainTab === 'about-us',
+                'font-general-sans-medium': mainTab === 'find-our-store',
               },
             )}
           >
-            About Us
+            Find Our Store
           </Link>
           <Link
-            to="/about-us"
+            to="/find-our-store"
             target="_top"
             className={clsx(
               'group-hover:translate-y-[3.6rem] transition-all ease-in duration-200',
               {
-                'font-general-sans-medium': mainTab === 'about-us',
+                'font-general-sans-medium': mainTab === 'find-our-store',
               },
             )}
           >
-            About Us
+            Find Our Store
           </Link>
         </li>
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
-            to="find-our-store"
+            to="/about-us"
             target="_top"
             className={clsx(
               'group-hover:translate-y-[2rem] transition-all ease-in duration-200',
               {
-                'font-general-sans-medium': mainTab === 'find-our-store',
+                'font-general-sans-medium': mainTab === 'about-us',
               },
             )}
           >
-            Find Our Store
+            About Us
           </Link>
           <Link
-            to="find-our-store"
+            to="/about-us"
             target="_top"
             className={clsx(
               'group-hover:translate-y-[3.6rem] transition-all ease-in duration-200',
               {
-                'font-general-sans-medium': mainTab === 'find-our-store',
+                'font-general-sans-medium': mainTab === 'about-us',
               },
             )}
           >
-            Find Our Store
+            About Us
           </Link>
         </li>
       </ul>
       <div className="flex items-center gap-32">
-        <Link to="wishlist">
+        <Link to="/wishlist">
           <HeartIcon classes={isDarkLayout ? '!text-almost-white-1' : ''} />
         </Link>
-        <Link to="cart">
+        <Link to="/cart">
           <CartIcon classes={isDarkLayout ? '!text-almost-white-1' : ''} />
         </Link>
         <LinkButton
