@@ -5,7 +5,7 @@ import { useUrl } from '../../utils/hooks/useUrl'
 
 import { LinkButton } from '../ui/button'
 
-import { CartIcon, HeartIcon } from '../icons'
+import { CartIcon, HeartIcon, UserIcon } from '../icons'
 
 export const Navbar = () => {
   const { mainTab, isDarkLayout } = useUrl()
@@ -114,10 +114,11 @@ export const Navbar = () => {
         <Link to="/cart">
           <CartIcon classes={isDarkLayout ? '!text-almost-white-1' : ''} />
         </Link>
+        <UserIcon classes={isDarkLayout ? '!text-almost-white-1' : ''} />
         <LinkButton
           variant={isDarkLayout ? 'solid-white' : 'solid-gray'}
-          href="/sign-in"
-          label="SIGN IN"
+          href="/book"
+          label="BOOK NOW"
         />
       </div>
     </nav>
