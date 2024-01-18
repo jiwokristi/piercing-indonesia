@@ -1,32 +1,25 @@
 import { Link } from 'react-router-dom'
 
+import {
+  buttonVariants,
+  ButtonVariants,
+} from '../../../utils/constants/variants/button'
+
 interface LinkButton {
   href: string
   label: string
+  classes?: string
+  variant: ButtonVariants
 }
 
-export const LinkButtonWhite = ({ href, label }: LinkButton) => {
+export const LinkButton = ({
+  variant,
+  href,
+  label,
+  classes = '',
+}: LinkButton) => {
   return (
-    <Link
-      to={href}
-      className="group flex flex-col-reverse gap-16 max-h-[4rem] px-24 py-12 bg-almost-white-1 font-general-sans-medium text-gray-3 text-16 transition-all duration-200 ease-in"
-    >
-      <span className="group-hover:translate-y-32 transition-all ease-in duration-200">
-        {label}
-      </span>
-      <span className="group-hover:translate-y-32 transition-all ease-in duration-200">
-        {label}
-      </span>
-    </Link>
-  )
-}
-
-export const LinkButtonGray = ({ href, label }: LinkButton) => {
-  return (
-    <Link
-      to={href}
-      className="group flex flex-col-reverse gap-16 max-h-[4rem] px-24 py-12 bg-gray-1 text-almost-white-1 text-16 transition-all duration-200 ease-in"
-    >
+    <Link to={href} className={`${buttonVariants({ variant })} ${classes}`}>
       <span className="group-hover:translate-y-32 transition-all ease-in duration-200">
         {label}
       </span>

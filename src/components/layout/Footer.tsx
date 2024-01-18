@@ -19,6 +19,7 @@ export const Footer = () => {
           <li>
             <Link
               to="/"
+              target="_top"
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
@@ -30,6 +31,7 @@ export const Footer = () => {
           <li>
             <Link
               to="/products?filter=all"
+              target="_top"
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
@@ -41,6 +43,7 @@ export const Footer = () => {
           <li>
             <Link
               to="/about-us"
+              target="_top"
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
@@ -52,6 +55,7 @@ export const Footer = () => {
           <li>
             <Link
               to="/find-our-store"
+              target="_top"
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
@@ -67,6 +71,7 @@ export const Footer = () => {
           <li>
             <Link
               to="/get-help"
+              target="_top"
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
@@ -126,6 +131,7 @@ export const Footer = () => {
           <li>
             <Link
               to="/about-us"
+              target="_top"
               className={clsx('font-general-sans-medium text-16', {
                 'text-gray-3': isDarkLayout,
                 'text-almost-white-1': !isDarkLayout,
@@ -136,7 +142,18 @@ export const Footer = () => {
           </li>
           <li>
             <Link
-              to="/news"
+              to="/about-us/our-team"
+              className={clsx('text-14 transition-all ease-in', {
+                'text-gray-1 hover:text-gray-3': isDarkLayout,
+                'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
+              })}
+            >
+              Our Team
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about-us/news"
               className={clsx('text-14 transition-all ease-in', {
                 'text-gray-1 hover:text-gray-3': isDarkLayout,
                 'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,
@@ -147,7 +164,7 @@ export const Footer = () => {
           </li>
           <li>
             <Link
-              to="/careers"
+              to="/about-us/careers"
               className={clsx('text-14 transition-all ease-in', {
                 'text-gray-1 hover:text-gray-3': isDarkLayout,
                 'text-almost-white-2 hover:text-almost-white-1': !isDarkLayout,

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 
 import { useUrl } from '../../utils/hooks/useUrl'
 
-import { LinkButtonGray, LinkButtonWhite } from '../ui/button'
+import { LinkButton } from '../ui/button'
 
 import { CartIcon, HeartIcon } from '../icons'
 
@@ -26,6 +26,7 @@ export const Navbar = () => {
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
             to="/"
+            target="_top"
             className={clsx(
               'group-hover:translate-y-[2rem] transition-all ease-in duration-200',
               {
@@ -37,6 +38,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/"
+            target="_top"
             className={clsx(
               'group-hover:translate-y-[3.6rem] transition-all ease-in duration-200',
               {
@@ -48,11 +50,14 @@ export const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/products?filter=all">Products</Link>
+          <Link to="/products?filter=all" target="_top">
+            Products
+          </Link>
         </li>
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
             to="/about-us"
+            target="_top"
             className={clsx(
               'group-hover:translate-y-[2rem] transition-all ease-in duration-200',
               {
@@ -64,6 +69,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="/about-us"
+            target="_top"
             className={clsx(
               'group-hover:translate-y-[3.6rem] transition-all ease-in duration-200',
               {
@@ -77,6 +83,7 @@ export const Navbar = () => {
         <li className="group overflow-hidden flex flex-col-reverse gap-16 max-h-[2rem]">
           <Link
             to="find-our-store"
+            target="_top"
             className={clsx(
               'group-hover:translate-y-[2rem] transition-all ease-in duration-200',
               {
@@ -88,6 +95,7 @@ export const Navbar = () => {
           </Link>
           <Link
             to="find-our-store"
+            target="_top"
             className={clsx(
               'group-hover:translate-y-[3.6rem] transition-all ease-in duration-200',
               {
@@ -106,11 +114,11 @@ export const Navbar = () => {
         <Link to="cart">
           <CartIcon classes={isDarkLayout ? '!text-almost-white-1' : ''} />
         </Link>
-        {isDarkLayout ? (
-          <LinkButtonWhite href="/sign-in" label="SIGN IN" />
-        ) : (
-          <LinkButtonGray href="/sign-in" label="SIGN IN" />
-        )}
+        <LinkButton
+          variant={isDarkLayout ? 'solid-white' : 'solid-gray'}
+          href="/sign-in"
+          label="SIGN IN"
+        />
       </div>
     </nav>
   )

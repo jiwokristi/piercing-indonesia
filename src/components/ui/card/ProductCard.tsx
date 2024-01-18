@@ -3,6 +3,8 @@ import dayjs from 'dayjs'
 
 import { mediumFormat } from '../../../utils/constants/date'
 
+import { useUrl } from '../../../utils/hooks/useUrl'
+
 import { HeartIcon } from '../../icons'
 
 export interface ProductCardProps {
@@ -26,6 +28,8 @@ export const ProductCard = ({
   startDate,
   endDate,
 }: ProductCardProps) => {
+  const { isDarkLayout } = useUrl()
+
   return (
     <div className="relative grid grid-rows-[min-content] gap-16 font-general-sans-medium text-18 snap-start">
       <div className="w-fit h-fit overflow-hidden">
@@ -38,7 +42,14 @@ export const ProductCard = ({
       </div>
       <div className="flex flex-col gap-8">
         <p className="leading-paragraph">{name}</p>
-        <p className="text-gray-2 leading-paragraph mb-8">{category}</p>
+        <p
+          className={clsx('leading-paragraph mb-8', {
+            'text-almost-white-3': isDarkLayout,
+            'text-gray-2': !isDarkLayout,
+          })}
+        >
+          {category}
+        </p>
         {previousPrice && (
           <p className="line-through text-16">{previousPrice}</p>
         )}
@@ -57,7 +68,13 @@ export const ProductCard = ({
         )}
       </div>
       <button className="absolute right-0 bottom-0">
-        <HeartIcon classes="transition-all ease-in hover:fill-gray-1" />
+        <HeartIcon
+          classes={`transition-all ease-in ${
+            isDarkLayout
+              ? '!text-almost-white-1 hover:fill-almost-white-1'
+              : 'hover:fill-gray-1'
+          }`}
+        />
       </button>
     </div>
   )
