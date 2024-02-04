@@ -1,9 +1,4 @@
-import {
-  Hero,
-  OurCollection,
-  NewArrivals,
-  TopSelling,
-} from '../../components/home'
+import { Hero, OurCollection, NewArrivals, TopSelling } from '@/features/home'
 
 export const Home = () => {
   return (

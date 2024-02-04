@@ -1,12 +1,14 @@
 import { useState } from 'react'
 
-import { Carousel } from '../ui'
-import { LinkButton } from '../ui/button'
+import { Carousel } from '@/components/Carousel'
+import { LinkButton } from '@/components/button'
 
-import robert from '../../assets/images/our-team/robert-andall.jpg'
-import alison from '../../assets/images/our-team/alison-erickson.jpg'
-import donald from '../../assets/images/our-team/donald-teel.jpg'
-import ramiro from '../../assets/images/our-team/ramiro-pianarosa.jpg'
+import robert from '@/assets/images/our-team/robert-andall.jpg'
+import alison from '@/assets/images/our-team/alison-erickson.jpg'
+import donald from '@/assets/images/our-team/donald-teel.jpg'
+import ramiro from '@/assets/images/our-team/ramiro-pianarosa.jpg'
+
+import classes from './OurTeam.module.css'
 
 const teamMembers = [
   {
@@ -43,7 +45,9 @@ export const OurTeam = () => {
       </header>
       <div className="relative">
         {/* ----- Team Info ----- */}
-        <div className="absolute top-0 bottom-0 left-0 flex flex-col gap-32 w-1/2 pl-48 pr-32 py-96 bg-gray-3 z-10 mask-element--inner">
+        <div
+          className={`absolute top-0 bottom-0 left-0 flex flex-col gap-32 w-1/2 pl-48 pr-32 py-96 bg-gray-3 z-10 ${classes['mask-element--inner']}`}
+        >
           <p className="text-44 font-general-sans-medium leading-medium">
             Donald Teel
           </p>
@@ -79,7 +83,7 @@ export const OurTeam = () => {
         {/* ----- Team Images ----- */}
         <Carousel
           withArrows
-          classes="auto-cols-[28%] mask-element !overflow-hidden max-w-[130rem]"
+          classes={`auto-cols-[28%] ${classes['mask-element']} !overflow-hidden max-w-[130rem]`}
           onBack={() => moveCarousel('back')}
           onNext={() => moveCarousel('next')}
           disableBack={currentPosition.index === 0}

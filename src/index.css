@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ? ----- RESET ----- */
 @layer base {
   * {
     @apply m-0 box-border p-0;
@@ -25,6 +26,7 @@
   }
 }
 
+/* ? ----- GENERAL COMPONENTS ----- */
 @layer components {
   .scrollbar::-webkit-scrollbar {
     @apply w-8 h-8;
@@ -63,46 +65,7 @@
   }
 }
 
-/* *----- LAYOUT ----- */
+/* ? ----- LAYOUT ----- */
 #RootLayout section:not(#Hero):not(#NewArrivals):not(#TopSelling) {
   @apply mx-auto max-w-[140rem] px-32;
-}
-
-/* *----- OUR TEAM ----- */
-.mask-element {
-  /* ? The transparent is the ones that will be faded out. */
-  /* ? The white is just something that has no opacity on it, you can change it to red and it will work the same. */
-
-  /* ? The white begins at 70%, and then up until 80% it won't be faded out. */
-  -webkit-mask: linear-gradient(
-    to right,
-    transparent,
-    white 70%,
-    white 80%,
-    transparent
-  );
-  mask: linear-gradient(
-    to right,
-    transparent,
-    white 70%,
-    white 80%,
-    transparent
-  );
-}
-
-.mask-element--inner {
-  -webkit-mask: linear-gradient(
-    to right,
-    transparent,
-    white 10%,
-    white 92%,
-    transparent
-  );
-  mask: linear-gradient(
-    to right,
-    transparent,
-    white 10%,
-    white 92%,
-    transparent
-  );
 }

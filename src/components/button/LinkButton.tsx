@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   buttonVariants,
   ButtonVariants,
-} from '../../../utils/constants/variants/button'
+} from '../../utils/constants/variants/button'
 
 interface LinkButton {
   href: string

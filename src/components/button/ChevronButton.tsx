@@ -1,4 +1,4 @@
-import { ChevronsLeftIcon, ChevronsRightIcon } from '../../icons'
+import { ChevronsLeftIcon, ChevronsRightIcon } from '../icons'
 
 interface ChevronButtonProps extends React.ComponentProps<'button'> {
   classes?: string

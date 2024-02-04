@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-import { useUrl } from '../../utils/hooks/useUrl'
+import { useUrl } from '../utils/hooks/useUrl'
 
 import { ChevronButtonGray } from './button/ChevronButton'
 

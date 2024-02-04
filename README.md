@@ -6,7 +6,7 @@
 
 Form fields:
 
-I don't have an account (checkbox), first name, middle name (optional), last name, email, password, date of birth, sign in button, sign in via Google button.
+Make me an account (checkbox), name, date of birth, email, password, sign in button, sign in via Google button.
 
 - Home (CTA parallax)
 

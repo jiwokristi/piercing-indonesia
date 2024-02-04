@@ -1,3 +1,5 @@
+export * from './ArrowUp'
+export * from './Asterisk'
 export * from './Cart'
 export * from './Chevron'
 export * from './Heart'
