@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
-import { PlusIcon } from '../icons'
+import { PlusIcon } from '@/components/icons'
 
-import lobePiercingImage from '../../assets/images/people/muhammad-taha-ibrahim.jpg'
-import tonguePiercingImage from '../../assets/images/people/lorenzo-nafissi.jpg'
-import labretPiercingImage from '../../assets/images/people/alexander-krivitskiy.jpg'
-import septumPiercingImage from '../../assets/images/people/edward-howell.jpg'
+import lobePiercingImage from '@/assets/images/people/muhammad-taha-ibrahim.jpg'
+import tonguePiercingImage from '@/assets/images/people/lorenzo-nafissi.jpg'
+import labretPiercingImage from '@/assets/images/people/alexander-krivitskiy.jpg'
+import septumPiercingImage from '@/assets/images/people/edward-howell.jpg'
 
 export const OurCollection = () => {
   return (

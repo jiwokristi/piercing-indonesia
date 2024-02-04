@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 
-export const variants = {
+const variants = {
   'solid-white': ['text-gray-3', 'bg-almost-white-1'],
   'solid-gray': ['text-almost-white-1', 'bg-gray-1'],
 
@@ -13,16 +13,33 @@ export const variants = {
   'outlined-gray': ['text-gray-1', 'ring-inset', 'ring-1', 'ring-gray-1'],
 }
 
+const sizes = {
+  sm: 'max-h-[4rem] px-24 py-12 text-16 tracking-0.1',
+  xl: ['text-52', 'px-16', 'py-12', '-tracking-0.1'],
+}
+
+const effects = {}
+
+const flexOptions = {
+  'column-reverse': 'flex flex-col-reverse',
+  row: 'flex',
+}
+
 export type ButtonVariants = keyof typeof variants
 
 export const buttonVariants = cva(
-  'group flex flex-col-reverse gap-16 max-h-[4rem] overflow-hidden px-24 py-12 font-general-sans-medium text-center text-16 tracking-0.1 transition-all ease-in duration-200 disabled:cursor-not-allowed',
+  'group gap-16 overflow-hidden font-general-sans-medium text-center transition-all ease-in duration-200 disabled:cursor-not-allowed',
   {
     variants: {
       variant: variants,
+      size: sizes,
+      effect: effects,
+      flex: flexOptions,
     },
     defaultVariants: {
       variant: 'solid-gray',
+      size: 'sm',
+      flex: 'column-reverse',
     },
   },
 )

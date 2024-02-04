@@ -1,11 +1,11 @@
 import clsx from 'clsx'
 import dayjs from 'dayjs'
 
-import { mediumFormat } from '../../../utils/constants/date'
+import { mediumFormat } from '../../utils/constants/date'
 
-import { useUrl } from '../../../utils/hooks/useUrl'
+import { useUrl } from '../../utils/hooks/useUrl'
 
-import { HeartIcon } from '../../icons'
+import { HeartIcon } from '../icons'
 
 export interface ProductCardProps {
   src: string

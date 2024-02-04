@@ -45,9 +45,9 @@ export default {
       paragraph: '1.5',
     },
     letterSpacing: {
-      0.1: '0.1',
-      0.25: '0.25',
-      1.25: '1.25',
+      0.1: '0.1rem',
+      0.25: '0.25rem',
+      1.25: '1.25rem',
     },
     extend: {
       fontFamily: {
@@ -58,6 +58,8 @@ export default {
         'general-sans-semibold': ['GeneralSans-Semibold', 'sans-serif'],
         'general-sans-bold': ['GeneralSans-Bold', 'sans-serif'],
       },
+
+      // ? ----- COLOR SYSTEM -----
       colors: {
         'almost-white': { 1: '#FBF8F2', 2: '#e2dfda', 3: '#c9c6c2' },
         gray: {
@@ -67,11 +69,20 @@ export default {
         },
         danger: '#f03e3e',
       },
+
+      // ? ----- SHADOW SYSTEM -----
       boxShadow: {
         'focus-white': '0 0 0 3px rgba(251, 248, 242, 0.5)',
       },
+
       backgroundImage: {
         'hero-image': "url('./src/assets/images/people/hayes-potter.jpg')",
+        'chevron-down': "url('./src/components/icons/ChevronDown.svg')",
+        'chevron-left': "url('./src/components/icons/ChevronLeft.svg')",
+        'chevron-right': "url('./src/components/icons/ChevronRight.svg')",
+      },
+      rotate: {
+        360: '360deg',
       },
     },
   },

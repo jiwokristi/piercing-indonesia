@@ -1,5 +1,9 @@
 import { Heart } from 'lucide-react'
 
-export const HeartIcon = ({ classes = '' }: { classes?: string }) => {
-  return <Heart className={`text-gray-1 ${classes}`} />
+interface HeartIconProps extends React.ComponentProps<typeof Heart> {
+  classes?: string
+}
+
+export const HeartIcon = ({ classes = '', ...props }: HeartIconProps) => {
+  return <Heart className={`text-gray-1 ${classes}`} {...props} />
 }

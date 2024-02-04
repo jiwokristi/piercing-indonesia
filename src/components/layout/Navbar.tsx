@@ -3,9 +3,9 @@ import clsx from 'clsx'
 
 import { useUrl } from '../../utils/hooks/useUrl'
 
-import { LinkButton } from '../ui/button'
+import { LinkButton } from '../button'
 
-import { CartIcon, HeartIcon } from '../icons'
+import { CartIcon, HeartIcon, UserIcon } from '../icons'
 
 export const Navbar = () => {
   const { mainTab, isDarkLayout } = useUrl()
@@ -14,7 +14,7 @@ export const Navbar = () => {
     <nav
       id="Navbar"
       className={clsx(
-        'sticky top-0 z-20 text-20 flex items-center p-32 justify-between tracking-1.25',
+        'sticky top-0 z-20 text-20 flex items-center p-32 justify-between',
         {
           'bg-gray-3': isDarkLayout,
           'bg-almost-white-1': !isDarkLayout,
@@ -114,10 +114,11 @@ export const Navbar = () => {
         <Link to="/cart">
           <CartIcon classes={isDarkLayout ? '!text-almost-white-1' : ''} />
         </Link>
+        <UserIcon classes={isDarkLayout ? '!text-almost-white-1' : ''} />
         <LinkButton
           variant={isDarkLayout ? 'solid-white' : 'solid-gray'}
-          href="/sign-in"
-          label="SIGN IN"
+          href="/book"
+          label="BOOK NOW"
         />
       </div>
     </nav>
