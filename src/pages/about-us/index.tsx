@@ -1,4 +1,4 @@
-import { About, OurTeam } from '../../components/about-us'
+import { About, OurTeam } from '@/features/about-us'
 
 export const AboutUs = () => {
   return (
