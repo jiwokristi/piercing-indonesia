@@ -37,7 +37,7 @@ export const OurTeam = () => {
   }
 
   return (
-    <section id="OurTeam" className="py-96">
+    <section id="OurTeam" className="py-48">
       {/* ----- Heading ----- */}
       <header className="flex flex-col heading--primary mb-64">
         <h2>MEET</h2>
