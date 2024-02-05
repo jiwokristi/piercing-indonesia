@@ -45,15 +45,15 @@ export const OurTeam = () => {
         {/* ----- Team Info ----- */}
         <div className="flex flex-col gap-32 w-1/2 p-32 bg-gray-3">
           <p className="text-44 font-general-sans-medium leading-medium">
-            Donald Teel
+            Robert Andall
           </p>
           <p className="heading--tertiary text-almost-white-3">
             Owner & Head Piercer
           </p>
-          <blockquote className="flex flex-col gap-16 text-20 leading-paragraph">
+          <blockquote className="flex flex-col gap-16 text-16 leading-paragraph">
             <span>
-              Hey there! I'm Donald Teel, the proud owner and head piercer here
-              at Piercing Indonesia.
+              Hey there! I'm Robert Andall, the proud owner and head piercer
+              here at Piercing Indonesia.
             </span>
             <span>
               With a passion for self-expression and a knack for precision, I've
