@@ -32,7 +32,7 @@ export const Carousel = ({
     <div className={`relative ${containerClasses}`}>
       {withArrows && (
         <ChevronButtonGray
-          classes="absolute top-1/2 -left-24 -translate-y-1/2 z-10"
+          classes="absolute top-1/2 -left-24 -translate-y-1/2 z-10 disabled:cursor-not-allowed"
           direction="left"
           onClick={onBack}
           disabled={disableBack}
@@ -54,7 +54,7 @@ export const Carousel = ({
       </div>
       {withArrows && (
         <ChevronButtonGray
-          classes="absolute top-1/2 -right-24 -translate-y-1/2 z-10"
+          classes="absolute top-1/2 -right-24 -translate-y-1/2 z-10 disabled:cursor-not-allowed"
           direction="right"
           onClick={onNext}
           disabled={disableNext}
