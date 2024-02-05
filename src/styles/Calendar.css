@@ -1,5 +1,5 @@
 .react-datepicker {
-  @apply relative bg-almost-white-1 !border-transparent w-fit h-fit font-general-sans-medium shadow-xl rounded-none;
+  @apply relative bg-almost-white-1 !border-almost-white-1 w-fit h-fit font-general-sans-medium shadow-xl rounded-none;
 }
 
 .react-datepicker__header {
@@ -9,9 +9,9 @@
 .react-datepicker__current-month {
   @apply text-16 tracking-0.1;
 }
-/* animasi perlu dibenerin */
+
 .react-datepicker__year-dropdown-container {
-  @apply relative flex flex-col text-12 after:content-[''] after:absolute after:top-1/2 after:-right-16 after:-translate-y-1/2 after:w-12 after:h-12 after:bg-chevron-down after:bg-cover after:bg-no-repeat after:bg-center after:transition-all after:ease-in-out after:duration-300;
+  @apply relative flex flex-col w-fit mx-auto mb-16 text-12 after:content-[''] after:absolute after:top-1/2 after:-right-16 after:-translate-y-1/2 after:w-12 after:h-12 after:bg-chevron-down after:bg-cover after:bg-no-repeat after:bg-center;
 }
 
 .react-datepicker__year-read-view--down-arrow {
@@ -23,32 +23,35 @@
 }
 
 .react-datepicker__navigation--previous {
-  @apply after:content-[''] after:absolute after:top-16 after:-translate-y-1/2 after:rounded after:border after:border-gray-3/30 after:w-32 after:h-32 after:bg-chevron-left after:bg-no-repeat after:bg-center;
+  @apply after:content-[''] after:absolute after:top-16 after:-translate-y-1/2 after:w-32 after:h-32 after:bg-chevron-left after:bg-no-repeat after:bg-center;
 }
 
 .react-datepicker__navigation--next {
-  @apply after:content-[''] after:absolute after:top-16 after:-translate-y-1/2 after:rounded after:border after:border-gray-3/30 after:w-32 after:h-32 after:bg-chevron-right after:bg-no-repeat after:bg-center;
+  @apply after:content-[''] after:absolute after:top-16 after:-translate-y-1/2 after:w-32 after:h-32 after:bg-chevron-right after:bg-no-repeat after:bg-center;
 }
 
 .react-datepicker__navigation-icon {
   @apply hidden;
 }
 
-.react-datepicker__year-dropdown-container {
-  @apply w-fit mx-auto mb-16;
-}
-
 .react-datepicker__year-dropdown {
   @apply w-max left-1/2 -translate-x-1/2 bg-almost-white-1 rounded border-gray-3/30 text-16;
 }
-/* animasi chevron perlu dibenerin */
-.react-datepicker__year-dropdown-container::after
-  .react-datepicker__year-dropdown {
-  @apply after:rotate-180;
-}
 
 .react-datepicker__year-option {
-  @apply p-8 first:p-0 transition-all ease-in hover:bg-almost-white-3/30;
+  @apply p-8 transition-all ease-in hover:bg-almost-white-3/30;
+}
+
+.react-datepicker__year-option:has(
+    .react-datepicker__navigation--years-previous
+  ) {
+  @apply relative h-32 after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:-translate-y-1/2 after:-translate-x-1/2 after:h-16 after:w-16 after:bg-chevron-down after:bg-no-repeat after:bg-center after:bg-cover;
+}
+
+.react-datepicker__year-option:has(
+    .react-datepicker__navigation--years-upcoming
+  ) {
+  @apply relative h-32 after:content-[''] after:absolute after:top-1/2 after:left-1/2 after:-translate-y-1/2 after:-translate-x-1/2 after:h-16 after:w-16 after:bg-chevron-up after:bg-no-repeat after:bg-center after:bg-cover;
 }
 
 .react-datepicker__year-option--selected_year {
@@ -65,37 +68,35 @@
 }
 
 .react-datepicker__month {
-  @apply flex flex-col gap-8 m-0 p-32 pb-64 pt-0;
+  @apply flex flex-col gap-8 m-0 px-32 pb-64 pt-0;
 }
 
 .react-datepicker__day--disabled {
-  @apply !text-gray-3/50 cursor-not-allowed;
+  @apply cursor-not-allowed;
 }
 
 .react-datepicker__day--disabled:not(.react-datepicker__day--today) {
   @apply hover:!bg-transparent;
 }
 
-.react-datepicker__day-name {
+.react-datepicker__day-name,
+.react-datepicker__day--disabled {
   @apply text-gray-3/50;
 }
 
 .react-datepicker__day,
 .react-datepicker__day-name {
-  @apply flex items-center justify-center w-32 h-32;
+  @apply flex items-center justify-center w-32 h-32 rounded;
 }
 
-.react-datepicker__day:not(.react-datepicker__day--selected):not(
-    .react-datepicker__day--keyboard-selected
-  ) {
-  @apply rounded transition-all ease-in hover:bg-almost-white-3/30;
+.react-datepicker__day:not(.react-datepicker__day--selected) {
+  @apply transition-all ease-in bg-transparent hover:bg-almost-white-3/30;
 }
 
-.react-datepicker__day--today {
+.react-datepicker__day--today:not(.react-datepicker__day--selected) {
   @apply !bg-almost-white-3/30 font-normal;
 }
 
-.react-datepicker__day--keyboard-selected,
 .react-datepicker__day--selected {
-  @apply bg-gray-1 text-almost-white-1 hover:bg-gray-1;
+  @apply !bg-gray-1 font-normal;
 }

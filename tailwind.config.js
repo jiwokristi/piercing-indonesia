@@ -77,6 +77,7 @@ export default {
 
       backgroundImage: {
         'hero-image': "url('./src/assets/images/people/hayes-potter.jpg')",
+        'chevron-up': "url('./src/components/icons/ChevronUp.svg')",
         'chevron-down': "url('./src/components/icons/ChevronDown.svg')",
         'chevron-left': "url('./src/components/icons/ChevronLeft.svg')",
         'chevron-right': "url('./src/components/icons/ChevronRight.svg')",
