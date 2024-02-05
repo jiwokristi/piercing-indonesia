@@ -11,7 +11,7 @@ import jewelry5 from '@/assets/images/jewelry/gabrielle-henderson.jpg'
 
 export const NewArrivals = () => {
   return (
-    <section id="NewArrivals" className="flex flex-col px-48 pt-96">
+    <section id="NewArrivals" className="flex flex-col pt-96">
       {/* ----- Heading ----- */}
       <div className="flex items-end justify-between py-32">
         <header className="flex flex-col heading--secondary">

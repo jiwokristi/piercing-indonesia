@@ -18,6 +18,7 @@ export const Navbar = () => {
         {
           'bg-gray-3': isDarkLayout,
           'bg-almost-white-1': !isDarkLayout,
+          hidden: mainTab === 'sign-in',
         },
       )}
     >
