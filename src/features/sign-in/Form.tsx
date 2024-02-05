@@ -28,7 +28,7 @@ export const SignInForm = () => {
   return (
     <form
       noValidate
-      className="flex flex-col pb-64"
+      className="flex flex-col border-b-2 border-almost-white-1"
       onSubmit={handleSubmit(submitHandler)}
     >
       <Modal open={open} onClose={() => setOpen(false)}>
@@ -63,7 +63,7 @@ export const SignInForm = () => {
             type="text"
             placeholder="NAME..."
             size="xl"
-            classes="uppercase"
+            classes="uppercase px-16"
             onChange={(e) => {
               setValue('name', e.target.value, {
                 shouldDirty: true,
@@ -83,7 +83,7 @@ export const SignInForm = () => {
                   : 'DATE OF BIRTH...'
               }
               size="xl"
-              classes="uppercase"
+              classes="uppercase px-16"
               readOnly
             />
           </button>
@@ -96,7 +96,7 @@ export const SignInForm = () => {
         type="email"
         placeholder="EMAIL..."
         size="xl"
-        classes="uppercase"
+        classes="uppercase px-16"
         onChange={(e) => {
           setValue('email', e.target.value, {
             shouldDirty: true,
@@ -112,6 +112,7 @@ export const SignInForm = () => {
         type="password"
         placeholder="PASSWORD..."
         size="xl"
+        classes="px-16"
         onChange={(e) => {
           setValue('password', e.target.value, {
             shouldDirty: true,
@@ -120,7 +121,12 @@ export const SignInForm = () => {
           })
         }}
       />
-      <Button variant="solid-gray" size="xl" flex="row">
+      <Button
+        variant="solid-gray"
+        size="xl"
+        flex="row"
+        classes="px-16 bg-gray-3"
+      >
         <div className="relative flex w-fit overflow-hidden">
           <span>SIGN IN</span>
           <div className="flex flex-row-reverse h-fit translate-y-12 -translate-x-32 -rotate-45">
