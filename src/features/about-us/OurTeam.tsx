@@ -26,13 +26,11 @@ const teamMembers = [
 ]
 
 export const OurTeam = () => {
-  const [currentPosition, setCurrentPosition] = useState({ pos: 0, index: 2 })
+  const [currentPosition, setCurrentPosition] = useState(0)
 
   const moveCarousel = (direction: 'back' | 'next') => {
     setCurrentPosition((prev) =>
-      direction === 'back'
-        ? { pos: prev.pos + 110, index: prev.index - 1 }
-        : { pos: prev.pos - 110, index: prev.index + 1 },
+      direction === 'back' ? prev + 100 : prev - 100,
     )
   }
 
@@ -43,11 +41,9 @@ export const OurTeam = () => {
         <h2>MEET</h2>
         <h2 className="self-end italic">OUR TEAM</h2>
       </header>
-      <div className="relative">
+      <div className="flex items-center gap-32">
         {/* ----- Team Info ----- */}
-        <div
-          className={`absolute top-0 bottom-0 left-0 flex flex-col gap-32 w-1/2 pl-48 pr-32 py-96 bg-gray-3 z-10 ${classes['mask-element--inner']}`}
-        >
+        <div className="flex flex-col gap-32 w-1/2 p-32 bg-gray-3">
           <p className="text-44 font-general-sans-medium leading-medium">
             Donald Teel
           </p>
@@ -83,11 +79,14 @@ export const OurTeam = () => {
         {/* ----- Team Images ----- */}
         <Carousel
           withArrows
-          classes={`auto-cols-[28%] ${classes['mask-element']} !overflow-hidden max-w-[130rem]`}
+          containerClasses="w-1/2"
+          classes={`auto-cols-[65%] !overflow-hidden max-w-full ${classes['mask-element']}`}
           onBack={() => moveCarousel('back')}
           onNext={() => moveCarousel('next')}
-          disableBack={currentPosition.index === 0}
-          disableNext={currentPosition.index === teamMembers.length - 1}
+          disableBack={currentPosition === 0}
+          disableNext={
+            Math.abs(currentPosition / 100) === teamMembers.length - 1
+          }
         >
           {teamMembers.map((member, i) => (
             <div
@@ -95,14 +94,14 @@ export const OurTeam = () => {
               key={i}
               className="w-fit h-fit overflow-hidden transition-all ease-in"
               style={{
-                transform: `translateX(${currentPosition.pos}%)`,
+                transform: `translateX(${currentPosition}%)`,
               }}
             >
               <img
                 className="aspect-[9_/_16] object-cover object-center transition-all ease-in hover:scale-110"
                 style={{ inlineSize: '100%' }}
                 src={member.image}
-                alt=""
+                alt="Image of a Piercing Indonesia employee."
               />
             </div>
           ))}
