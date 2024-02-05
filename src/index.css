@@ -66,6 +66,7 @@
 }
 
 /* ? ----- LAYOUT ----- */
-#RootLayout section:not(#Hero):not(#NewArrivals):not(#TopSelling) {
+#RootLayout
+  section:not(#Hero):not(#NewArrivals):not(#TopSelling):not(#CallToAction) {
   @apply mx-auto max-w-[140rem] px-32;
 }
